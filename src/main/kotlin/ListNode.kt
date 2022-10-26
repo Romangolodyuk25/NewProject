@@ -1,14 +1,25 @@
+import java.util.LinkedList
+import java.util.Queue
+
 class ListNode(var value: Int) {
     var next: ListNode? = null
+
 }
-
-class List {
-    fun newfieldstart(head: ListNode, next: ListNode) {
-
+class List(head: ListNode, tail:ListNode) {
+    fun addtail(head: ListNode) { // функция которая добавит Node в конце
+    var queue: Queue<ListNode> = LinkedList<ListNode>()
+        queue.add(head)
+        while (!queue.isEmpty()){
+            var element = queue.poll()
+            if (element.next!=null) {
+                queue.add(element.next)
+            } else{
+                head.next = ListNode(5)//cоздать новый node
+            }
+        }
     }
 
-    fun newfieldfinal(head: ListNode, next: ListNode) {
-
+    fun addhead(head: ListNode) { // Функция которая добавит Node вначале
     }
 }
 
@@ -18,7 +29,6 @@ fun main(args: Array<String>) {
     head.next!!.next= ListNode(7)
     head.next!!.next!!.next = ListNode(14)
 
-    val List = List()
-   // var result = List.newfieldstart(10,8)
+    //val List:List? = null
 
 }
