@@ -7,8 +7,7 @@ class List(head: ListNode, tail: ListNode) {
         // }
     }
     fun addhead(head: ListNode) { // Функция которая добавит Node вначале
-        if (head.next == null) {
-        } else {
+        if (head.next != null) {
             head.next = ListNode(6)
         }
     }
