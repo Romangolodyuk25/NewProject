@@ -6,9 +6,9 @@ fun main(args: Array<String>) {
     list.addtail(3)
     list.addtail(25)
 
-    //var result = list.addtail(5)
+    var result =list.printOnIndex(3)
     //var result1 = list.addhead(4)
 
-//    println(result)
+     println(result)
 //    println(result1)
 }
