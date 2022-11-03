@@ -1,13 +1,13 @@
 fun main(args: Array<String>) {
     val list = List()
 
-    list.addhead(10)
-    list.addtail(15)
-    list.addtail(3)
-    list.addtail(25)
+    list.addHead(10)
+    list.addTail(15)
+    list.addTail(3)
+    list.addTail(25)
 
-    var result =list.printOnIndex(3)
-    //var result1 = list.addhead(4)
+    var result =list.get(3)
+    //var result1 = list.addHead(4)
 
      println(result)
 //    println(result1)
