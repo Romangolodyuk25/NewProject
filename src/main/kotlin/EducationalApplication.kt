@@ -6,9 +6,14 @@ fun main(args: Array<String>) {
     list.addTail(3)
     list.addTail(25)
 
-    var result =list.get(3)
-    //var result1 = list.addHead(4)
 
-     println(result)
+    var result = list.addHead(4)
+
+    try {
+       list.get(5)
+    } catch (e: NullPointerException) {
+        println("Вы ввели недопустимый индекс")
+    }
+
 //    println(result1)
 }
