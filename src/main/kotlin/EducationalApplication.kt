@@ -10,8 +10,9 @@ fun main(args: Array<String>) {
     var result = list.addHead(4)
 
     try {
-       list.get(5)
-    } catch (e: NullPointerException) {
+       var tryRes = list.get(5)
+        println(tryRes)
+    } catch (e: IndexOutOfBoundsException) {
         println("Вы ввели недопустимый индекс")
     }
 

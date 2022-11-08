@@ -42,15 +42,16 @@ class List(head: ListNode? = null, tail: ListNode? = null) {
     fun get (index: Int): Int {
         var currentIndex: ListNode? = this.head
         var n  = index
-        while (currentIndex?.next!=null) {
-            if (index==0) {
-                return this.head!!.value
-            }
             while (n!=0) {
-                currentIndex = currentIndex!!.next
+                if (currentIndex?.next==null) {
+                    throw IndexOutOfBoundsException("Вы ввели недопустимы индецкс")
+                }
+                if (index==0) {
+                    return this.head!!.value
+                }
+                currentIndex = currentIndex?.next//изменил !! на ?
                 n--
             }
-        }
         return currentIndex!!.value
     }
 }
